@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: backend
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/niladrix719/QXRsYW4-
+    path: charts/backend
+    targetRevision: HEAD
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: backend-ns
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

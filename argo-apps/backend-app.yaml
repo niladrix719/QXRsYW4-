@@ -11,7 +11,7 @@ spec:
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
-    namespace: backend-ns
+    namespace: backend-namespace
   syncPolicy:
     automated:
       prune: true

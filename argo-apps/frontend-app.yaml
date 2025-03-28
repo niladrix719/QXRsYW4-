@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: frontend-app
+  name: vue-service 
   namespace: argocd
 spec:
   project: default
@@ -14,7 +14,7 @@ spec:
         - values.yaml
   destination:
     server: https://kubernetes.default.svc
-    namespace: frontend-namespace
+    namespace: qxrsyw4
   syncPolicy:
     automated:
       prune: true
